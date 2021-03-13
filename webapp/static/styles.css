@@ -1,0 +1,76 @@
+/* layout.html */
+/* header that includes the logo */
+#header {
+    background-color: #f4f1ea;
+    min-height: 6.25rem;
+}
+
+/* set the max height of the img in navbar class */
+.navbar-item img {
+    max-height: 3.75rem;
+}
+
+/* set minimum height of the whole page to stick the footer at the bototm */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* set padding of the content body to prevent hiding it for small window */
+#content-section {
+    padding-bottom: 10rem;
+}
+
+/* set footer at the bottom with fixed height */
+#footer {
+    background-color: #f4f1ea;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+/* float the footer logo at the left side */
+#footer-logo {
+    float: left;
+    max-height: 3.75rem;
+}
+
+/* color of texts of footer */
+.footer-text {
+    color: #2d557d;
+}
+
+/* bold for the title part of footer text */
+#footer-text-title {
+    font-weight: bold;
+}
+
+
+
+/* index.html */
+/* search input box */
+#search {
+    width: 80%;
+}
+
+/* search button */
+#submit {
+    width: 15%;
+}
+
+
+
+/* detail.html */
+/* display the image of the product at the center of the column */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* change the font size of the title of the product */
+#product-title {
+    font-size: 30px;
+}

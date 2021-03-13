@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mini Product Display Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bulma css implementation -->
+    <link rel="stylesheet" href="{% static 'bulma.min.css' %}">
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type='text/javascript' src="{% static 'webapp/main.js' %}"></script>
+  </head>
+  <body>
+    <div id="page-container">
+      <!-- header -->
+      <nav id="header" class="navbar" role="navigation" aria-label="main navigation">
+        <!-- a logo image with hyperlink to main page -->
+        <div id="home-menu-button" class="navbar-brand">
+          <a class="navbar-item" href="/">
+          <img src="{% static 'images/Christianbook_logo.png' %}">
+          </a>
+        </div>
+      </nav>
+      <!-- main body section that other html body like index.html or detail.html will be located -->
+      <div id="content-section">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <!-- footer -->
+      <footer id="footer" class="footer">
+        <!-- footer logo -->
+        <img id="footer-logo" src="{% static 'images/FooterLogo.png' %}">
+        <!-- footer text -->
+        <div class="container has-text-right">
+          <p id="footer-text-title" class="footer-text">Christianbook</p>
+          <p class="footer-text">1-800-247-4784</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "webapp/layout.html" %}
+{% load static %}
+
+{% block content %}
+    <section class="section">
+      <div class="container">
+        <!-- Divide the container into two seperate columns -->
+        <div class="columns">
+          <!-- A width of the left column is 2/5, a class from bulma -->
+          <div class="column is-two-fifths">
+            <!-- A product image with a hyperlink -->
+            <a href="{{ item.link }}" target="_blank"><img src="{{ item.image }}" class="center"></a>
+          </div>
+          <div class="column">
+            <!-- Other product info like title, ISBN13, ISBN, and rating -->
+            <p id="product-title"><b>{{ item.title }}</b></p>
+            <br>
+            <p><b>ISBN13:</b> {{ item.isbn13 }}</p>
+            <p><b>ISBN:</b> {{ item.isbn }}</p>
+            <p><b>Rating:</b> {{ item.customer_rating }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
